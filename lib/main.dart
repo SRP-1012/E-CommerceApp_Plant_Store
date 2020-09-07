@@ -3,14 +3,10 @@ import 'package:provider/provider.dart';
 
 import './screens/bar-screen.dart';
 import './screens/cart-screen.dart';
-import './screens/orders-screen.dart';
-import './screens/categories-screen.dart';
+import './screens/orders-screen.dart';  
 import './screens/login-screen.dart';
 import './Providers/auth-provider.dart';
-import 'Providers/order-provider.dart';
-import './Providers/product-provider.dart';
-import './Providers/offer-provider.dart';
-import './screens/product-detail-screen.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -23,15 +19,6 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider<AuthProvider>(
           create: (_) => AuthProvider(),
-        ),
-        ChangeNotifierProvider<OrderProvider>(
-          create: (_) => OrderProvider(),
-        ),
-        ChangeNotifierProvider<ProductProvider>(
-          create: (_) => ProductProvider(),
-        ),
-        ChangeNotifierProvider(
-          create: (_) => OfferProvider(),
         ),
       ],
       child: MaterialApp(
@@ -48,8 +35,6 @@ class MyApp extends StatelessWidget {
           CartScreen.routename: (ctx) => CartScreen(),
           OrdersScreen.routename: (ctx) => OrdersScreen(),
           LoginScreen.routename: (ctx) => LoginScreen(),
-          CategoriesScreen.routename: (ctx) => CategoriesScreen(),
-          ProductDetailScreen.routeName: (ctx) => ProductDetailScreen()
         },
       ),
     );
