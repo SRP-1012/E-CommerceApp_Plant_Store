@@ -23,24 +23,11 @@ class ProductDisplay extends StatelessWidget {
           ),
           IconButton(
             icon: Icon(Icons.shopping_cart),
-            onPressed: () {
-              Navigator.pushNamed(context, CartScreen.routename);
-            },
+            onPressed: () {},
           )
         ],
       ),
-      body: GridView.builder(
-        padding: EdgeInsets.all(10),
-        itemCount: productList.length,
-        gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-        itemBuilder: (ctx, i) => Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ProductTile(
-            productList[i],
-          ),
-        ),
-      ),
+      body: null,
     );
   }
 }
